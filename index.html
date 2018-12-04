@@ -10,7 +10,8 @@
 	body {
 		background-color: lightpink;
 		background-image: url("bg.jpg");
-		background-size: cover;
+		background-size: 225% ;
+		
 		font-family:OCR A Std, monospace;
 	
 		margin: auto;
@@ -22,17 +23,40 @@
 			padding: 20px;
 			text-align: center;
 			line-height:1.5em;
-			background-color: white;
+			background-color: floralwhite;
 	}
 	
 	.body {
-		margin-top: 175px;
+		margin-top: 20px;
 		
 		border: dotted 5px black;
 		margin-bottom: 30px;
 	
 	}
 	
+	.logo {
+	width: 100px;
+		border-radius: 50%;
+		border: solid 2px black;
+		align: center;
+		
+	
+	
+	}
+	
+	audio {
+	background-color: pink;
+   }
+	
+	.spoilerbutton {;align:center;margin:5px 0;}
+
+	.spoiler {overflow:hidden;background: floralwhite}
+
+	.spoiler > div {-webkit-transition: all 0.2s ease;-moz-transition: margin 0.2s ease;-o-transition: all 0.2s ease;transition: margin 0.2s ease;}
+
+	.spoilerbutton[value="Show Commission Sheet"] + .spoiler > div {margin-top:-250%;}
+
+	.spoilerbutton[value="Hide"] + .spoiler {padding:5px;}
 	.music {
 		margin: auto;
 		
@@ -48,26 +72,29 @@
 	}
 	
 	.top {
-		border-bottom: 5px dotted black;
+		border: 5px dotted black;
 		font-family:OCR A Std, monospace;
 		color: black;
 		font-size: 18px;
 		-webkit-text-fill-color: black; /* Will override color (regardless of order) */
 		-webkit-text-stroke-width: 1.5px;
 		-webkit-text-stroke-color: black;
-		position:center;
+		position:absolute;
 		text-align: center;
-		background-color: white;
+		background-color: floralwhite;
 		height: 75px;
-		padding-bottom: 2em;
+		padding-bottom: 20em;
+		padding-left:10px;
+		padding-right:10px;
 		padding-top: 1.5em;
-		line-height .5em
+		margin-left: 20px;
+		line-height .1em
 		}
 	.social {
 		border: 5px dotted black;
 		margin-left:auto;
 		margin-right:auto;
-		margin-top: 30px;
+		margin-top: 15px;
 		margin-bottom: 30px;
 		body {text-align:center;}
 	}
@@ -75,8 +102,13 @@
 	
 	<body>
 	<div class="top">
-	<h1><strong>SMEXZI COMMISSIONING GUIDELINES</strong></h1>
-	<h3<em>-revised 12/03/18<br /></em></h3>
+	<h1><strong>SMEXZI</strong><br/>
+		<img class="logo " src="logo.png" /></h1>
+	<h3<em>Cute Girls, Tentacles, & Maximum Lewdness!</em></h3><br>
+	<p style="font-size: 14px">Social Media:</p>
+	
+	
+	
 	
 	<div id="social">
 		<table class="social">
@@ -84,6 +116,8 @@
     <th><a href="http://twitter.com/smexzi"><img src="twitter.png" /></a></th> 
 	<th><a href="http://supersmexy.deviantart.com"><img src="deviantart.png" /></a></th> 
     <th><a href="http://smexzi.newgrounds.com"><img src="newgrounds.png"/></a></th>
+	<th><a href="http://pixiv.me/smexzi"><img src="pixiv.png" width="36px"/></a></th>
+	<th><a href="http://picarto.tv/smexzi"><img src="picarto.png" width="36px"/></a></th>
   </tr>
   
 </table>
@@ -100,11 +134,21 @@ Your browser does not support the audio element.
 	
 	
 	<div class = "text body">
+		<h2 style="text-decoration:underline"><em>COMMISSION GUIDELINES!</em></h2>
 	
-		
-<p><img src="sheet.png" width="500" alt="Commission Sheet" /></p>
-<p><strong>SLOT 1: </strong><br /><strong>SLOT 2: </strong><br /><strong>SLOT 3: <br /></strong></p>
+		<input class="spoilerbutton" type="button" value="Show Commission Sheet" onclick="this.value=this.value=='Show Commission Sheet'?'Hide':'Show Commission Sheet';">
 
+	<div class="spoiler"><div>
+
+<p><img src="sheet.png" width="500" alt="Commission Sheet" /></p>
+	</div></div>
+
+<p><strong>Queue:</strong></p>
+<ul>
+<li>@Xtilaromi
+</ul>
+<br/>
+<p><strong>FAQ:</strong></p>
 <ul>
 <li><em>1 MOSTLY OBSCURED GUY&nbsp; / DISEMBODIED DICKS / TENTACLES <br/> <strong>DO NOT COUNT AS AN EXTRA CHARACTER!</strong></em></li>
 <li><em>Please be specific!</em></li>
@@ -139,7 +183,7 @@ Your browser does not support the audio element.
 </ul>
 <p>*unless I say otherwise</p>
 <p><em>Thank you so much for being interested in commissioning me, I truly appreciate the support and I look forward to hearing your commission requests. :3</em></p>
-<p><em>-smexzi</em></p>
+<p><em>-Smexzi</em></p>
 <br />
 	
 	
