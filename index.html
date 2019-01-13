@@ -48,12 +48,14 @@
 </script>
 
 	<script type="text/javascript">
-		if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) )     
-{
-   var url = "mobile.html";    
-   $(location).attr('href',url);
+		function isMobileDevice() {
+			return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
+		}
+		if(isMobileDevice())     
+		{
+			window.location.replace("commissions.html");
 
-}
+		}
 </script>
 	<!--
 	Widescreen YouTube Embeds by Matthew Buchanan & Hayden Hunter
@@ -139,7 +141,7 @@ $(function() {
 .grid_1 { width:80px; }
 .grid_2 { width:140px; }
 .grid_3 { width:220px; }
-.grid_4 { width:300px; }
+.grid_4 { width:300px;}
 .grid_5 { width:380px; }
 .grid_6 { width:460px; }
 .grid_7 { width:500px; }
@@ -151,7 +153,7 @@ $(function() {
 
 .column { /* 10px margin on BOTH sides, resulting in a 20px gutter between columns */
 	margin: 0 10px;
-	float: left;
+	float: center;
 }
 .row { /* center the row on the page, clear the interior contents with overflow:hidden hack */
 	width: 960px;
@@ -163,11 +165,15 @@ $(function() {
 }
 html{
     min-height:100%;/* make sure it is at least as tall as the viewport */
-    position:relative;
+ 
 }
+
+#home {
+	width: 50%;
+	margin: 0 auto;
+	}
 		body { 
-		height:100%;
-		margin: 80px 0 0 0;
+		margin: auto;
 		font-family: Helvetica, sans-serif;
 		font-size: 13px;
 		background: url(bg.jpg);
@@ -725,29 +731,33 @@ COMMISSIONING GUIDELINES:
 &bull; Please be..." /><meta property="og:determiner" content="a" /><meta property="og:image" content="https://66.media.tumblr.com/2cc4ecfbc8bc12cca71165431b931b7c/tumblr_pfixi0KCpQ1sfzunuo1_1280.png" /><meta property="al:ios:url" content="tumblr://x-callback-url/blog?blogName=smexzi&amp;postID=" /><meta property="al:ios:app_name" content="Tumblr" /><meta property="al:ios:app_store_id" content="305343404" /><meta property="al:android:url" content="tumblr://x-callback-url/blog?blogName=smexzi&amp;postID=" /><meta property="al:android:app_name" content="Tumblr" /><meta property="al:android:package" content="com.tumblr" /><!-- END TUMBLR FACEBOOK OPENGRAPH TAGS --><!-- TWITTER TAGS --><meta charset="utf-8"><meta name="twitter:site" content="tumblr" /><meta name="twitter:card" content="app" /><meta name="twitter:description" content="smexzi" /><meta name="twitter:title" content="smexzi" /><meta name="twitter:creator" content="Smexy_Chan" /><meta name="twitter:app:name:iphone" content="Tumblr" /><meta name="twitter:app:name:ipad" content="Tumblr" /><meta name="twitter:app:name:googleplay" content="Tumblr" /><meta name="twitter:app:id:iphone" content="305343404" /><meta name="twitter:app:id:ipad" content="305343404" /><meta name="twitter:app:id:googleplay" content="com.tumblr" /><meta name="twitter:app:url:iphone" content="tumblr://x-callback-url/blog?blogName=smexzi&amp;referrer=twitter-cards" /><meta name="twitter:app:url:ipad" content="tumblr://x-callback-url/blog?blogName=smexzi&amp;referrer=twitter-cards" /><meta name="twitter:app:url:googleplay" content="tumblr://x-callback-url/blog?blogName=smexzi&amp;referrer=twitter-cards" /><link rel="canonical" href="http://smexzi.tumblr.com/Commissions" /></head>
 
 
-<body id="home">
+<body id="home" style=" width: 16%; margin: auto; height: 100%" >
 
-<div class="row">
+<div class="column" style=>
 
-	<div class="column grid_4">
 	
-		<div class="shadow">
+	
+		<!--<div class="shadow">
 
 			<div class="lightpanel roundedbottom roundedtop masthead">
-			<h1><a class="roundedbottom roundedtop" href="/">Smexzi<br><span style="font-size:22px; font-style: italic; ">Hentai Artist</span></a></h1>
+			<h1><a class="roundedbottom roundedtop" style="text-align: center" href="/">Smexzi<br><span style="font-size:22px; font-style: italic; ">Hentai Artist</span></a></h1>
 			</div>
 			
 		</div>
-	
-		<div class="shadow">
+		-->
+		<div class="shadow" style="width: 100%; margin: 10px auto">
 		
 
         
 
 			<div class="lightpanel">
-			<div><p style="text-align:center"><img class="roundedtop portrait" style="border-radius:50%;width:250px; background-color: #4d4d4d" src="logo.png" /><i>Cute Girls, Tentacles, & Maximum Lewdness!</i><br/><br/><span><b>Social Media:</b> <div class="music">
+			<div><div><p style="font-size: 36px; margin: 10px; text-align: center"><b>Smexzi</b></p>
+			</div>
+			<div><div><p style="font-size: 16px; margin: 10px; text-align: center"><i>Hentai Artist</i></p>
+			</div>
+			<p style="text-align:center"><img class="roundedtop portrait" style="border-radius:50%;width:95%; background-color: #4d4d4d" src="logo.png" /><i><br/>Cute Girls, Tentacles, & Maximum Lewdness!</i><br/><br/><span><b>Social Media:</b> <div class="music">
 	
-</div>	<table class="social"style="margin:auto">
+</div>	<table class="social"style="margin:auto; width: 75%">
   <tr>
     <th><a href="http://twitter.com/smexzi"><img src="twitter.png" width="36px" /></a></th> 
 	<th><a href="http://supersmexy.deviantart.com"><img src="deviantart.png" width="36px" /></a></th> 
@@ -758,14 +768,18 @@ COMMISSIONING GUIDELINES:
   
 </table></p></div>
 			</div>
-
+			
 			<div class="lightpanel nav">
-			<a class="nav" href="http://smexy-chan.tumblr.com">Personal Blog</a>
+			<a class="nav" style="text-align: center" href="commissions.html">Commission Guidelines</a>
+			</div>
+			
+			<div class="lightpanel nav">
+			<a class="nav" style="text-align: center" href="http://smexy-chan.tumblr.com">Personal Blog</a>
 			</div>
  
 			
 			<div class="lightpanel nav">
-			<a class="nav" href="http://gumroad.com/smexychan">Gumroad</a>
+			<a class="nav" style="text-align: center" href="http://gumroad.com/smexychan">Gumroad</a>
 			</div>
 			
 
@@ -779,13 +793,13 @@ COMMISSIONING GUIDELINES:
 			
 			<p><a href="http://www.tumblr.com/theme/7285/" target="_blank">Catching Elephant</a> is a theme by <a href="http://www.catchingzebra.com/" target="_blank">Andy Taylor</a></p>
 			<p>Theme modified by Smexzi</p>
-			<div><i>Icons made by <a href="https://www.freepik.com/" title="Freepik">Freepik</a>
+			<div><p><i>Icons made by <a href="https://www.freepik.com/" title="Freepik">Freepik</a>
 	from <a href="https://www.flaticon.com/"title="Flaticon">www.flaticon.com</a> is licensed by
 	<a href="http://creativecommons.org/licenses/by/3.0/"
-	title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></i></div>
+	title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></i></p></div>
 	<p><i>Music is "Dating Start!" by Toby Fox</p></i>
 	<p><i>&copy Smexzi 2018<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, All characters drawn by Smexzi are 18 or older</i></p>
-			<audio autoplay volume="0.1" loop style="margin:auto; width: 250px;">
+			<audio controls no-download autoplay volume="0.1" loop style="margin:auto; width: 250px;">
   <source src="shop.mp3" type="audio/mpeg">
 Your browser does not support the audio element.
 </audio> 
@@ -803,7 +817,7 @@ Your browser does not support the audio element.
 	<p>&nbsp;</p>
 	</div>
 
-	<div class="column grid_7">
+	<!--<div class="column grid_7">
 
 
 				
@@ -877,7 +891,7 @@ Your browser does not support the audio element.
 
 	
 </div>
-
+-->
 <!-- Twitter feed call is down here so it loads last -->
 <script type="text/javascript" src="http://twitter.com/javascripts/blogger.js"></script>
 <script type="text/javascript" src="http://twitter.com/statuses/user_timeline/smexzi.json?callback=twitterCallback2&amp;count=3"></script>
@@ -971,5 +985,4 @@ Your browser does not support the audio element.
             };
             l(w,'load',a);
         }(window, document));
-</script><noscript id="bootloader" data-bootstrap="{&quot;Components&quot;:{&quot;PostActivity&quot;:[],&quot;NotificationPoller&quot;:{&quot;messaging_keys&quot;:[],&quot;token&quot;:&quot;c86f8a500596474a7ef5034081f694bd&quot;,&quot;inbox_unread&quot;:0},&quot;DesktopDashboardLogo&quot;:{&quot;animations&quot;:[[&quot;http:\/\/assets.tumblr.com\/images\/logo\/hover-animations\/1.png?_v=161861acded461bb6e995593a3bae835&quot;,&quot;http:\/\/assets.tumblr.com\/images\/logo\/hover-animations\/1@2x.png?_v=496a774637302a598c851381d00009b0&quot;]]},&quot;TumblelogIframe&quot;:{&quot;unified&quot;:true,&quot;variant&quot;:null,&quot;isCompact&quot;:true,&quot;tumblelogBundleSrc&quot;:&quot;http:\/\/assets.tumblr.com\/client\/prod\/standalone\/tumblelog\/index.build.js?_v=0dd3581265e0a5a3d95969be86d97d9e&quot;,&quot;tumblelogName&quot;:&quot;smexzi&quot;,&quot;isLoggedIn&quot;:false,&quot;isFriend&quot;:false,&quot;formKey&quot;:&quot;&quot;,&quot;canSubscribe&quot;:false,&quot;isSubscribed&quot;:false,&quot;tumblelogTitle&quot;:&quot;smexzi&quot;,&quot;tumblelogAvatar&quot;:&quot;https:\/\/66.media.tumblr.com\/avatar_8674ddf26612_40.pnj&quot;,&quot;tumblelogHost&quot;:&quot;http:\/\/smexzi.tumblr.com&quot;,&quot;isOptica&quot;:false,&quot;isCustomTheme&quot;:true,&quot;themeHeaderImage&quot;:&quot;https:\/\/static.tumblr.com\/69f7a908d094abbcb6728a6c3816ba7a\/revacyp\/FDepj6qby\/tumblr_static_tumblr_static_e078va64upcs0c0gwookk0wss_focused_v3.png&quot;,&quot;themeBackgroundColor&quot;:&quot;#edddeb&quot;,&quot;themeTitleColor&quot;:&quot;#000000&quot;,&quot;themeAccentColor&quot;:&quot;#78c9a1&quot;,&quot;brag&quot;:true,&quot;adsEnabled&quot;:false,&quot;canShowAd&quot;:true,&quot;isPremium&quot;:false,&quot;showLrecAds&quot;:false,&quot;showStickyLrecBackfill&quot;:false,&quot;showGeminiAds&quot;:false,&quot;geminiSectionCodeDesktop&quot;:&quot;a10bca9c-0c5d-4a02-ab13-14ab8513d81d&quot;,&quot;geminiSectionCodeMobile&quot;:&quot;ced63809-b609-4aca-96a0-abc099acba6b&quot;,&quot;currentPageType&quot;:null,&quot;currentPage&quot;:false,&quot;searchQuery&quot;:&quot;&quot;,&quot;tag&quot;:&quot;&quot;,&quot;query&quot;:&quot;&quot;,&quot;chrono&quot;:false,&quot;postId&quot;:&quot;&quot;,&quot;src&quot;:&quot;http:\/\/smexzi.tumblr.com\/commissions&quot;,&quot;postUrl&quot;:&quot;&quot;,&quot;isBlocked&quot;:null,&quot;isAdmin&quot;:false,&quot;lookupButtonUrl&quot;:&quot;&quot;,&quot;showSpamButton&quot;:false,&quot;showRootPostButton&quot;:false,&quot;rootPostUrl&quot;:&quot;&quot;,&quot;showRadarPostButton&quot;:false,&quot;radarKeys&quot;:&quot;&quot;,&quot;isUniblocked&quot;:false,&quot;isNsfw&quot;:false,&quot;isAdult&quot;:false,&quot;isSpam&quot;:false,&quot;isPrimaryBlog&quot;:false,&quot;canEdit&quot;:false,&quot;canReblogSelf&quot;:false,&quot;showLikeButton&quot;:false,&quot;showReblogButton&quot;:false,&quot;reblogUrl&quot;:&quot;&quot;,&quot;showFanMailButton&quot;:false,&quot;showMessagingButton&quot;:false,&quot;loginCheckIframeSrc&quot;:&quot;http:\/\/assets.tumblr.com\/assets\/html\/iframe\/login_check.html?_v=3de94a184d600617102ddd5b48fb36e9&quot;,&quot;appInstallUrls&quot;:{&quot;android&quot;:&quot;https:\/\/play.google.com\/store\/apps\/details?id=com.tumblr\u0026referrer=utm_source%3Dtumblr%26utm_medium%3Diframe%26utm_campaign%3Dblog_network_floating_cta&quot;,&quot;ios&quot;:&quot;https:\/\/itunes.apple.com\/app\/apple-store\/id305343404?pt=9029\u0026ct=blog_network_floating_cta\u0026mt=8&quot;},&quot;appOpenReferrer&quot;:&quot;tumblr_new_iframe&quot;,&quot;isShowSearch&quot;:true,&quot;supplyLogging&quot;:[],&quot;secondsSinceLastActivity&quot;:-1}},&quot;Flags&quot;:{&quot;doods&quot;:&quot;eyJmaWx0ZXJfbnNmdyI6dHJ1ZSwic2FmZV9tb2RlIjp0cnVlLCJzYWZlX21vZGVfZW5hYmxlZCI6dHJ1ZSwia2V5Y29tbWFuZF9hdXRvX3BhZ2luYXRlIjp0cnVlLCJsb2dnZWRfb3V0X3NlYXJjaCI6dHJ1ZSwia3Jha2VuX3dlYl9sb2dnaW5nX2xpYnJhcnkiOnRydWUsInNlY3VyZV9mb3JtX2tleSI6dHJ1ZSwic2VjdXJlX2Zvcm1fa2V5X2Z1bGx5X29uIjp0cnVlLCJ0dW1ibGVsb2dfcG9wb3ZlciI6dHJ1ZSwiY2Fub25pY2FsX3VybF93cml0ZXMiOnRydWUsImVuYWJsZV9jYXB0dXJlX2pzIjp0cnVlLCJwcmltYV9wb3N0X2Zvcm1zIjp0cnVlLCJsb2NrZWRfcmVibG9nX3VpIjp0cnVlLCJ0YWJsZXRfYmFubmVyX2FjdGl2ZSI6dHJ1ZSwibW9iaWxlX2Jhbm5lcl9hY3RpdmUiOnRydWUsImxvZ19zZWFyY2hfYm94Ijp0cnVlLCJ1c2VyX21lbnRpb25zIjp0cnVlLCJodG1sNV9hdWRpb19wbGF5ZXIiOnRydWUsInBvcG92ZXJfcmVjb21tZW5kYXRpb25zIjp0cnVlLCJpbmRhc2hfcmVjb21tZW5kYXRpb25zIjp0cnVlLCJwb3B0aWNhX3R1bWJsZWxvZ19wb3BvdmVycyI6dHJ1ZSwidHVtYmxyX3R2Ijp0cnVlLCJkZXByZWNhdGVfZmVhdHVyZWRfdGFncyI6dHJ1ZSwicmVibG9nX3VpX3JlZnJlc2giOnRydWUsInRhYl9zd2l0Y2hlciI6dHJ1ZSwiZmFzdF9jb21wb3NlIjp0cnVlLCJkYXNoYm9hcmRfcmVmcmVzaCI6dHJ1ZSwibW9iaWxlX3dlYl9waG90b3NldHMiOnRydWUsIm1vYmlsZV93ZWJfZ2F0ZSI6dHJ1ZSwibW9iaWxlX3dlYl9wYWdlX3RpdGxlcyI6dHJ1ZSwibW9iaWxlX3dlYl9hYnVzZV9mb3JtIjp0cnVlLCJkb250X2Nhc3RfanNfZm9sbG93cyI6dHJ1ZSwiYWRzX25ld192ZW5kb3JfYnV0dG9ucyI6dHJ1ZSwicmVhY3RpdmF0aW9uX2Zsb3ciOnRydWUsImd1bHBqc19hZG1pbiI6dHJ1ZSwiZW5hYmxlX2pzX2Vycm9yc19sb2ciOnRydWUsImVuYWJsZV9qc19lcGhlbWVyYWxfbG9nIjp0cnVlLCJsb2dfbGFkeSI6dHJ1ZSwiY3Nsb2dnZXJfanMiOnRydWUsImRpc2NvdmVyeV9odWJfYWNjZXNzIjp0cnVlLCJoZWFkZXJfYWNjb3VudF9tZW51Ijp0cnVlLCJlbmFibGVfc2hhcmVfZW1iZWRfY29kZSI6dHJ1ZSwicmVkZGl0X3NoYXJpbmciOnRydWUsInBvc3RfaXRfZm9yd2FyZCI6dHJ1ZSwicGVlcHJfc2VhcmNoX2FuZF9maWx0ZXIiOnRydWUsImludGVybnNfcGFnZSI6dHJ1ZSwiZm9sbG93ZWRfc2VhcmNoZXNfYmlnX3dlYiI6dHJ1ZSwibGl2ZXBob3Rvc193ZWIiOnRydWUsInByb2plY3RfeF9hcHBlYWwiOnRydWUsInNhZmVfbW9kZV9vd25fcG9zdCI6dHJ1ZSwiaGlkZV9kZWZhdWx0X2hlYWRlcnNfYmxvZ19jYXJkcyI6dHJ1ZSwidHlwaW5nX2luZGljYXRvcl93cml0ZSI6dHJ1ZSwiZ2Rwcl9ndWNlX2lzX3JlcXVpcmVkIjp0cnVlLCJ0dW1ibHJfdmlkZW9fc3BvbnNvcmVkX2RheSI6dHJ1ZSwiYXJjaGl2ZS1wbHVzIjp0cnVlLCJkYXJsYV9hZF9mZWVkYmFjayI6dHJ1ZSwic3RhdHVzX2luZGljYXRvciI6dHJ1ZSwiZGlzYWJsZV95YWhvb19iX2Nvb2tpZSI6dHJ1ZSwibGl2ZXBob3RvcyI6dHJ1ZX0=&quot;},&quot;Context&quot;:{&quot;name&quot;:&quot;default&quot;,&quot;time&quot;:1544060625000,&quot;userinfo&quot;:{&quot;primary&quot;:&quot;&quot;,&quot;name&quot;:&quot;&quot;,&quot;channels&quot;:[]},&quot;hosts&quot;:{&quot;assets_host&quot;:&quot;http:\/\/assets.tumblr.com&quot;,&quot;secure_assets_host&quot;:&quot;https:\/\/assets.tumblr.com&quot;,&quot;www_host&quot;:&quot;http:\/\/www.tumblr.com&quot;,&quot;secure_www_host&quot;:&quot;https:\/\/www.tumblr.com&quot;,&quot;embed_host&quot;:&quot;https:\/\/embed.tumblr.com&quot;,&quot;safe_host&quot;:&quot;http:\/\/safe.txmblr.com&quot;,&quot;platform_host&quot;:&quot;http:\/\/platform.tumblr.com&quot;},&quot;language&quot;:&quot;en_US&quot;,&quot;language_simple&quot;:&quot;en&quot;,&quot;assets&quot;:&quot;http:\/\/assets.tumblr.com\/client\/prod\/&quot;},&quot;Translations&quot;:{&quot;%1$sReport %2$s&#039;s post?%3$sIf it violates our community guidelines, we&#039;ll remove it.%4$s&quot;:&quot;%1$sReport %2$s&#039;s reblog?%3$sIf it violates our community guidelines, we&#039;ll remove it.%4$s&quot;,&quot;%1$sReport %2$s&#039;s reply?%3$sIf it violates our community guidelines, we&#039;ll remove it.%4$s&quot;:&quot;%1$sReport %2$s&#039;s reblog?%3$sIf it violates our community guidelines, we&#039;ll remove it.%4$s&quot;}}"></noscript><script src="http://assets.tumblr.com/client/prod/standalone/tumblelog/index.build.js?_v=0dd3581265e0a5a3d95969be86d97d9e"></script></body>
-</html>
+</script></html>
